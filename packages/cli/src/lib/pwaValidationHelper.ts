@@ -1,6 +1,6 @@
-import {PwaValidationResult, ScoreResult} from '@bubblewrap/validator';
+import {PwaValidationResult, ScoreResult} from '@pwawrap/validator';
 import {red, green, bold, underline, yellow} from 'colors';
-import {Log} from '@bubblewrap/core';
+import {Log} from '@pwawrap/core';
 
 function getColor(score: ScoreResult): string {
   switch (score.status) {

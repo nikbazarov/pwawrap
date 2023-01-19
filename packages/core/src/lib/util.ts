@@ -60,6 +60,7 @@ export async function executeFile(
   if (log) {
     log.debug(`Executing command ${cmd} with args ${args}`);
   }
+  
   return await execFilePromise(cmd, args, {env: env, cwd: cwd});
 }
 

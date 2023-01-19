@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-import {GooglePlay, TwaManifest, asPlayStoreTrack} from '@bubblewrap/core';
+import {GooglePlay, TwaManifest, asPlayStoreTrack} from '@pwawrap/core';
 import * as fs from 'fs';
 import * as path from 'path';
 import {TWA_MANIFEST_FILE_NAME} from '../constants';
@@ -233,7 +233,7 @@ async function setupGooglePlay(args: PlayArgs): Promise<GooglePlay> {
   const manifestFile = args.manifest || path.join(process.cwd(), TWA_MANIFEST_FILE_NAME);
   const twaManifest = await TwaManifest.fromFile(manifestFile);
   // Update the TWA-Manifest if service account is supplied
-  // bubblewrap play --serviceAccountFile="/path/to/service-account.json"
+  // pwawrap play --serviceAccountFile="/path/to/service-account.json"
   // --manifest="/path/twa-manifest.json"
   if (args.serviceAccountFile) {
     twaManifest.serviceAccountJsonFile = args.serviceAccountFile;

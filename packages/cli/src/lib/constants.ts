@@ -16,15 +16,15 @@
 
 import {magenta} from 'colors';
 
-export const APP_NAME = 'bubblewrap-cli';
+export const APP_NAME = 'pwawrap-cli';
 export const ASSETLINKS_OUTPUT_FILE = './assetlinks.json';
 export const BUBBLEWRAP_LOGO = magenta(
 /* eslint-disable indent */
-`,-----.        ,--.  ,--.  ,--.
-|  |) /_,--.,--|  |-.|  |-.|  |,---.,--.   ,--,--.--.,--,--.,---.
-|  .-.  |  ||  | .-. | .-. |  | .-. |  |.'.|  |  .--' ,-.  | .-. |
-|  '--' '  ''  | \`-' | \`-' |  \\   --|   .'.   |  |  \\ '-'  | '-' '
-\`------' \`----' \`---' \`---'\`--'\`----'--'   '--\`--'   \`--\`--|  |-'
-                                                           \`--\'    `);
+`,------. ,--.   ,--.  ,---.  ,--.   ,--.                      
+|  .--. '|  |   |  | /  O  \\ |  |   |  |,--.--. ,--,--. ,---. 
+|  '--' ||  |.'.|  ||  .-.  ||  |.'.|  ||  .--'' ,-.  || .-. |
+|  | --' |   ,'.   ||  | |  ||   ,'.   ||  |   \\ '-'  || '-' '
+\`--'     '--'   '--'\`--' \`--''--'   '--'\`--'    \`--\`--'|  |-' 
+                                                       \`--'   `);
 /* eslint-enable indent */
 export const TWA_MANIFEST_FILE_NAME = './twa-manifest.json';

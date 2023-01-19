@@ -19,11 +19,11 @@ import {homedir} from 'os';
 import {existsSync} from 'fs';
 import {promises as fsPromises} from 'fs';
 import {loadOrCreateConfig} from '../lib/config';
-import {MockLog, JdkHelper, Result, AndroidSdkTools} from '@bubblewrap/core';
+import {MockLog, JdkHelper, Result, AndroidSdkTools} from '@pwawrap/core';
 import * as mock from 'mock-fs';
 import {MockPrompt} from './mock/MockPrompt';
 
-const DEFAULT_CONFIG_FOLDER = join(homedir(), '.bubblewrap');
+const DEFAULT_CONFIG_FOLDER = join(homedir(), '.pwawrap');
 const DEFAULT_CONFIG_NAME = 'config.json';
 const DEFAULT_CONFIG_FILE_PATH = join(DEFAULT_CONFIG_FOLDER, DEFAULT_CONFIG_NAME);
 const LEGACY_CONFIG_FOLDER = join(homedir(), '.llama-pack');
@@ -82,9 +82,9 @@ describe('config', () => {
       const mockLog = new MockLog();
       const mockPrompt = new MockPrompt();
       // Since 'createConfig' will be called, we push 3 future answers to 'mockPrompt'.
-      mockPrompt.addMessage('false'); // Should bubblewrap download the JDK?
+      mockPrompt.addMessage('false'); // Should pwawrap download the JDK?
       mockPrompt.addMessage('jdk'); // The path of the jdk. (not really used).
-      mockPrompt.addMessage('false'); // Should bubblewrap download Android SDK?
+      mockPrompt.addMessage('false'); // Should pwawrap download Android SDK?
       mockPrompt.addMessage('sdk'); // The path of the androidSdk. (not really used).
       await loadOrCreateConfig(mockLog, mockPrompt);
       // Checks if the file name was created.

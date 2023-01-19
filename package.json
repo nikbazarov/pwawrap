@@ -24,7 +24,7 @@
     "type": "git",
     "url": "git+https://github.com/nikbazarov/pwawrap.git"
   },
-  "author": "",
+  "author": "berkano",
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/jasmine": "^3.6.3",

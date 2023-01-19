@@ -17,7 +17,7 @@
 import * as fs from 'fs';
 import {join, resolve} from 'path';
 import {Config, DisplayModes, JdkHelper, KeyTool, Orientations, TwaGenerator, TwaManifest}
-  from '@bubblewrap/core';
+  from '@pwawrap/core';
 import {validateHost, validateColor, createValidateString, validateDisplayMode, validatePackageId,
   validateImageUrl, validateOptionalImageUrl, validateInteger, validateOrientation}
   from '../inputHelpers';

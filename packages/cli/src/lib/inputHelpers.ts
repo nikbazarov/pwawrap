@@ -18,7 +18,7 @@ import Color = require('color');
 import {URL} from 'url';
 import {isWebUri} from 'valid-url';
 import {Result, DisplayMode, asDisplayMode, asOrientation, Orientation, util}
-  from '@bubblewrap/core';
+  from '@pwawrap/core';
 import {ValidateFunction} from './Prompt';
 import {enUS as messages} from './strings';
 import {domainToASCII} from 'url';

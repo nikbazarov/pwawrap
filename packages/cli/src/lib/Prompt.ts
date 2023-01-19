@@ -14,7 +14,7 @@
  *  limitations under the License.
  */
 
-import {Result, fetchUtils} from '@bubblewrap/core';
+import {Result, fetchUtils} from '@pwawrap/core';
 import {Presets, Bar} from 'cli-progress';
 import {green} from 'colors';
 import * as inquirer from 'inquirer';

@@ -1,0 +1,41 @@
+{
+  "packageId": "life.icehouse.twa",
+  "host": "icehouse.life",
+  "name": "Cosmo-slots",
+  "launcherName": "Cosmo-slots",
+  "display": "fullscreen-sticky",
+  "themeColor": "#22377E",
+  "navigationColor": "#000000",
+  "navigationColorDark": "#000000",
+  "navigationDividerColor": "#000000",
+  "navigationDividerColorDark": "#000000",
+  "backgroundColor": "#22377E",
+  "enableNotifications": true,
+  "startUrl": "//climb//index.php?pwa=true",
+  "iconUrl": "https://icehouse.life/climb/icons/icon-512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "D:\\arbitrage\\cms-code\\pwawrap\\test\\android.keystore",
+    "alias": "twa00001"
+  },
+  "appVersionName": "3",
+  "appVersionCode": 3,
+  "shortcuts": [],
+  "generatorApp": "pwawrap-cli",
+  "webManifestUrl": "https://icehouse.life//climb//manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://icehouse.life//climb//",
+  "minSdkVersion": 19,
+  "orientation": "any",
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "appVersion": "3"
+}

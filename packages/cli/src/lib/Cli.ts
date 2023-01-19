@@ -30,7 +30,7 @@ import {doctor} from './cmds/doctor';
 import {merge} from './cmds/merge';
 import {fingerprint} from './cmds/fingerprint';
 // import {play, PlayArgs} from './cmds/play';
-import {fetchUtils} from '@bubblewrap/core';
+import {fetchUtils} from '@pwawrap/core';
 // import { play, PlayArgs, playPublish } from './cmds/play';
 
 export class Cli {

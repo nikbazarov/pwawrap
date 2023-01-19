@@ -15,7 +15,7 @@
  */
 
 import {ParsedArgs} from 'minimist';
-import {TwaManifest, DigitalAssetLinks, Fingerprint} from '@bubblewrap/core';
+import {TwaManifest, DigitalAssetLinks, Fingerprint} from '@pwawrap/core';
 import {TWA_MANIFEST_FILE_NAME, ASSETLINKS_OUTPUT_FILE} from '../constants';
 import {Prompt, InquirerPrompt} from '../Prompt';
 import * as path from 'path';

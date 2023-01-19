@@ -17,7 +17,7 @@
 
 import {join} from 'path';
 import {homedir} from 'os';
-import {Config, Log, ConsoleLog, JdkHelper, AndroidSdkTools} from '@bubblewrap/core';
+import {Config, Log, ConsoleLog, JdkHelper, AndroidSdkTools} from '@pwawrap/core';
 import {JdkInstaller} from './JdkInstaller';
 import {AndroidSdkToolsInstaller} from './AndroidSdkToolsInstaller';
 import {existsSync} from 'fs';
@@ -25,7 +25,7 @@ import {enUS as messages} from './strings';
 import {promises as fsPromises} from 'fs';
 import {InquirerPrompt, Prompt} from './Prompt';
 
-const DEFAULT_CONFIG_FOLDER = join(homedir(), '.bubblewrap');
+const DEFAULT_CONFIG_FOLDER = join(homedir(), '.pwawrap');
 const DEFAULT_CONFIG_NAME = 'config.json';
 export const DEFAULT_CONFIG_FILE_PATH = join(DEFAULT_CONFIG_FOLDER, DEFAULT_CONFIG_NAME);
 const LEGACY_CONFIG_FOLDER = join(homedir(), '.llama-pack');

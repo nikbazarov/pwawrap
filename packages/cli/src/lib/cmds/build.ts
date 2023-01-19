@@ -15,7 +15,7 @@
  */
 
 import {AndroidSdkTools, Config, GradleWrapper, JdkHelper, KeyTool, Log,
-  ConsoleLog, TwaManifest, JarSigner, SigningKeyInfo} from '@bubblewrap/core';
+  ConsoleLog, TwaManifest, JarSigner, SigningKeyInfo} from '@pwawrap/core';
 import * as fs from 'fs';
 import * as path from 'path';
 import {enUS as messages} from '../strings';
@@ -101,6 +101,7 @@ class Build {
   }
 
   async buildApk(): Promise<void> {
+
     await this.gradleWrapper.assembleRelease();
     await this.androidSdkTools.zipalignOnlyVerification(
         APK_BUILD_OUTPUT_FILE_NAME, // input file

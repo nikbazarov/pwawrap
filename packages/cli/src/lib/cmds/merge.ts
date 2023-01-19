@@ -16,7 +16,7 @@
 
 import * as path from 'path';
 import {ParsedArgs} from 'minimist';
-import {util, TwaManifest} from '@bubblewrap/core';
+import {util, TwaManifest} from '@pwawrap/core';
 import {updateVersions} from './shared';
 
 /**

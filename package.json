@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": true,
-  "version": "0.4.3",
+  "version": "0.0.1",
   "description": "Generate TWA projects from a Web Manifest",
   "scripts": {
     "build": "lerna run build",

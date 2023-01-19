@@ -26,8 +26,8 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-    "@pwawrap/core": "file:../core",
-    "@pwawrap/validator": "file:../validator",
+    "@pwawrap/core": "^1.0.2-alpha.1",
+    "@pwawrap/validator": "^1.0.2-alpha.1",
     "@types/cli-progress": "^3.7.0",
     "@types/color": "^3.0.0",
     "@types/inquirer": "^6.5.0",
@@ -44,5 +44,5 @@
     "semver": "^7.3.2",
     "valid-url": "^1.0.9"
   },
-  "gitHead": "ba2a8430ee11d6bf650ed3d071c9c144fff31538"
+  "gitHead": "9194d9bf00ba5d553ac1b17e7cd247b1a9788d68"
 }

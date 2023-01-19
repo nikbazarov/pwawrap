@@ -14,10 +14,10 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
-# Bubblewrap CLI
-![Node CI Status](https://github.com/GoogleChromeLabs/bubblewrap/workflows/Node%20CI/badge.svg)
+# PWAWrap CLI
+![Node CI Status](https://github.com/GoogleChromeLabs/pwawrap/workflows/Node%20CI/badge.svg)
 
-Bubblewrap is a Command Line Interface (CLI) that helps developers to create
+PWAWrap is a Command Line Interface (CLI) that helps developers to create
 a Project for an Android application that launches an existing Progressive Web App (PWA) using a
 [Trusted Web Activity (TWA)](https://developer.chrome.com/docs/android/trusted-web-activity/).
 
@@ -26,7 +26,7 @@ a Project for an Android application that launches an existing Progressive Web A
 
 ## Setting up the Environment
 
-When running Bubblewrap for the first time, it will offer to automatically download and install
+When running PWAWrap for the first time, it will offer to automatically download and install
 external dependencies. This is the recommended setup, but it's possible to
 [manually setup the environment](#manually-setting-up-the-environment).
 
@@ -34,18 +34,18 @@ external dependencies. This is the recommended setup, but it's possible to
 
 As an alternative to running the cli on your machine with Node.js directly you can use this 
 container image which got the cli and all dependencies pre-installed. To use the cli run
-`docker run --rm -ti ghcr.io/GoogleChromeLabs/bubblewrap:latest [cmd]` as you would normally 
-use `bubblewrap [cmd]`.
+`docker run --rm -ti ghcr.io/GoogleChromeLabs/pwawrap:latest [cmd]` as you would normally 
+use `pwawrap [cmd]`.
 
 ## Quickstart Guide
 
-### Installing Bubblewrap
+### Installing pwawrap
 
 ```shell
-npm i -g @bubblewrap/cli
+npm i -g @pwawrap/cli
 ```
 
-:warning: **Warning:** Don't use `sudo npm i -g @bubblewrap/cli` to install Bubblewrap. Using `npm` commands with `sudo`
+:warning: **Warning:** Don't use `sudo npm i -g @pwawrap/cli` to install PWAwrap. Using `npm` commands with `sudo`
 can create different kinds of problems and should be avoided (see
 [here](https://medium.com/@ExplosionPills/dont-use-sudo-with-npm-still-66e609f5f92) and
 [here](https://medium.com/@ExplosionPills/dont-use-sudo-with-npm-5711d2726aa3)).
@@ -54,16 +54,16 @@ can create different kinds of problems and should be avoided (see
 Generate an Android project from an existing Web Manifest:
 
 ```shell
-bubblewrap init --manifest https://my-twa.com/manifest.json
+pwawrap init --manifest https://my-twa.com/manifest.json
 ```
 
-When initalizing a project, Bubblewrap will download the Web Manifest and ask you to confirm
+When initalizing a project, pwawrap will download the Web Manifest and ask you to confirm
 the values that should be used when building the Android project.
 
 It will also ask you for the details needed to generate a signing key, used to sign the
 app before uploading to the Play Store.
 
-> :grey_exclamation: Even though we recommend Bubblewrap for building and generating a signed
+> :grey_exclamation: Even though we recommend pwawrap for building and generating a signed
 APK, the output from the `init` command is a regular Android project that can be opened
 and built using [Android Studio](https://developer.android.com/studio/). Please, refer to the
 [documentation]( https://developer.android.com/studio/publish/app-signing#sign-apk) to build and sign
@@ -71,7 +71,7 @@ applications using Android Studio.
 
 ### Building the Android Project
 ```shell
-bubblewrap build
+pwawrap build
 ```
 
 When building the project for the first time, the Android Build Tools will need to be installed.
@@ -86,7 +86,7 @@ explains how to extract the information needed to generate it.
 
 ## Commands
 
-![Overview of bubblewrap commands](command_flow.svg)
+![Overview of pwawrap commands](command_flow.svg)
 
 The diagram above shows which commands (in the black boxes) take as input or produce as output various files (in white ovals).
 An arrow leading to a file means "creates or modifies" and an arrow leading to a command means "is used as input".
@@ -100,7 +100,7 @@ parse the Web manifest and generate default values for the Android project, wher
 will prompt the user to confirm or input values where one could not be generated.
 
 ```
-bubblewrap init --manifest="<web-manifest-url>" [--directory="<path-to-output-location>"] [--chromeosonly] [--metaquest]
+pwawrap init --manifest="<web-manifest-url>" [--directory="<path-to-output-location>"] [--chromeosonly] [--metaquest]
 ```
 
 Options:
@@ -116,12 +116,12 @@ Builds the project into a final APK that can be uploaded to the Play Store.
 
 The command will ask the user for they key store passwords. Alternatively, users can set the
 passwords as enviromental variables, which allows running `build` as part of a continuous integration.
-Set `BUBBLEWRAP_KEYSTORE_PASSWORD` for the key store password and `BUBBLEWRAP_KEY_PASSWORD` as the key password.
+Set `pwawrap_KEYSTORE_PASSWORD` for the key store password and `pwawrap_KEY_PASSWORD` as the key password.
 
 Usage:
 
 ```
-bubblewrap build [--skipPwaValidation] [--skipSigning] [--manifest="<path-twa-manifest>"] [--signingKeyPath="<path-to-signing-key>"] [--signingKeyAlias="<key-alias>"]
+pwawrap build [--skipPwaValidation] [--skipSigning] [--manifest="<path-twa-manifest>"] [--signingKeyPath="<path-to-signing-key>"] [--signingKeyAlias="<key-alias>"]
 ```
 
 Options:
@@ -136,14 +136,14 @@ Options:
 
 Regenerates the Android project files from a `twa-manifest.json` file.
 
-:warning: **Warning:** Bubblewrap doesn't expect the generated Android project to be updated using
+:warning: **Warning:** pwawrap doesn't expect the generated Android project to be updated using
 external editors. Any files added manually to the Android project will be deleted or overwritten
 when `update` is executed. Changes to `twa-manifest.json` are preserved.
 
 Usage:
 
 ```
-bubblewrap update [--appVersionName="<version-string>"] [--skipVersionUpgrade] [--manifest="<path-twa-manifest>"]
+pwawrap update [--appVersionName="<version-string>"] [--skipVersionUpgrade] [--manifest="<path-twa-manifest>"]
 ```
 
 Options:
@@ -158,7 +158,7 @@ Validates a PWA agains the Quality Criteria for being using in a Trusted Web Act
 Usage:
 
 ```
-bubblewrap validate --url=[pwa-url]
+pwawrap validate --url=[pwa-url]
 ```
 
 ## `install`
@@ -168,7 +168,7 @@ Install the application generated in the output command to a device connected fo
 Usage:
 
 ```
-bubblewrap install [--apkFile="/path-to-apk/apkfile.apk"]
+pwawrap install [--apkFile="/path-to-apk/apkfile.apk"]
 ```
 
 Options:
@@ -182,7 +182,7 @@ Displays a list of commands and options.
 Usage:
 
 ```
-bubblewrap help
+pwawrap help
 ```
 
 ## `doctor`
@@ -193,7 +193,7 @@ and that they are at the correct version.
 Usage:
 
 ```
-bubblewrap doctor
+pwawrap doctor
 ```
 
 ## `updateConfig`
@@ -203,7 +203,7 @@ Sets the paths of the jdk or the androidSdk to the given paths.
 Usage:
 
 ```
-bubblewrap updateConfig  --jdkPath="/path-to-jdk" --androidSdkPath="/path-to-androidSdk"
+pwawrap updateConfig  --jdkPath="/path-to-jdk" --androidSdkPath="/path-to-androidSdk"
 ```
 
 Options:
@@ -217,7 +217,7 @@ Merges the user's web manifest into their twaManifest.json.
 Usage:
 
 ```
-bubblewrap merge --ignore [fields-list]
+pwawrap merge --ignore [fields-list]
 ```
 
 Options:
@@ -233,7 +233,7 @@ Manages the list of fingerprints used to generate the Digital Asset Links file f
 Usage:
 
 ```
-bubblewrap fingerprint [subcommand]
+pwawrap fingerprint [subcommand]
 ``` 
 
 Global flags:
@@ -247,7 +247,7 @@ Adds a fingerprint to the project configuration.
 Usage:
 
 ```
-bubblewrap fingerprint add [SHA-256 fingerprint] <flags>
+pwawrap fingerprint add [SHA-256 fingerprint] <flags>
 ```
 
 Additional flags:
@@ -259,7 +259,7 @@ Removes a fingerprint from the project configuration.
 
 Usage:
 ```
-bubblewrap fingerprint remove [SHA-256 fingerprint] <flags>
+pwawrap fingerprint remove [SHA-256 fingerprint] <flags>
 ```
 
 #### `list`
@@ -267,7 +267,7 @@ Lists the fingerprints in the project configuration.
 
 Usage:
 ```
-bubblewrap fingerprint list <flags>
+pwawrap fingerprint list <flags>
 ```
 
 #### `generateAssetLinks`
@@ -275,7 +275,7 @@ Generates an AssetLinks file from the project configuration
 
 Usage:
 ```
-bubblewrap fingerprint generateAssetLinks <flags>
+pwawrap fingerprint generateAssetLinks <flags>
 ```
 
 Flags:
@@ -301,7 +301,7 @@ The following options can be applied to all of the features commands:
 Usage:
 
 ```
-bubblewrap playPublish --serviceAccountFile="/path/to/service/account.json" --track="beta" --appBundleLocation="/home/appBundle.aab"
+pwawrap playPublish --serviceAccountFile="/path/to/service/account.json" --track="beta" --appBundleLocation="/home/appBundle.aab"
 ```
 
 Options:
@@ -313,7 +313,7 @@ Options:
 Usage:
 
 ```
-bubblewrap playRetain --add=86
+pwawrap playRetain --add=86
 ```
 
 Options:
@@ -326,11 +326,11 @@ Options:
 Usage:
 
 ```
-bubblewrap playVersionCheck --serviceAccountFile="/path/to/service/account.json"  --targetDirectory="/home/my/app/dir"
+pwawrap playVersionCheck --serviceAccountFile="/path/to/service/account.json"  --targetDirectory="/home/my/app/dir"
 ```
 
 Options:
-  - `--targetDirectory`: the directory that versionCheck should run in (defaults to the current directory). This should be your bubblewrap project directory.
+  - `--targetDirectory`: the directory that versionCheck should run in (defaults to the current directory). This should be your pwawrap project directory.
 
 ## `twa-manifest.json` reference
 
@@ -355,7 +355,7 @@ Fields:
 |fallbackType|`'customtabs'` \| `'webview'`|false|Fallback strategy used when a browser that supports Trusted Web Activity is not available on the users device. Defaults to `'customtabs'`.|
 |features|[Features](#Features)|false|Enables optional features in the Android application. Read the [Features](#Features) section for details.|
 |fingerprints|[Fingerprint](#fingerprint)[]|false|List of fingerprints used to generate the Digital Asset Links file. Read the [Fingerprint](#fingerprint) section for details.|
-|generatorApp|string|false|Identifier for tool used to generate the Android project. Bubblewrap uses `bubblewrap-cli`. Should only be modified by generator apps.|
+|generatorApp|string|false|Identifier for tool used to generate the Android project. pwawrap uses `pwawrap-cli`. Should only be modified by generator apps.|
 |host|string|true|The origin that will be opened in the Trusted Web Activity.|
 |iconUrl|string|true|Full URL to an the icon used for the application launcher and splash screen. Must be at least 512x512 px.|
 |isChromeOSOnly|boolean|false|Generates an application that targets only ChromeOS devices. Defaults to `false`.|
@@ -455,7 +455,7 @@ Information on the signature fingerprints for the application. Use to generate t
 
 ### Get the Java Development Kit (JDK) 11.
 The Android Command line tools requires the correct version of the JDK to run. To prevent version
-conflicts with a JDK version that is already installed, Bubblewrap uses a JDK that can unzipped in
+conflicts with a JDK version that is already installed, pwawrap uses a JDK that can unzipped in
 a separate folder.
 
 Download a version of JDK 11 that is compatible with your OS from
@@ -470,8 +470,8 @@ Download a version of Android command line tools that is compatible with your OS
 [https://developer.android.com/studio#command-tools](https://developer.android.com/studio#command-tools).
 Create a folder and extract the downloaded file into it. This will further install the androidSdk and android SDK manager without needing to install the whole Android IDE.
 
-### Tell Bubblewrap where the JDK and Android command line tools are
-When running `bubblewrap` for the first time, it will ask where it can find the JDK and Android command
+### Tell pwawrap where the JDK and Android command line tools are
+When running `pwawrap` for the first time, it will ask where it can find the JDK and Android command
 line tools. So, take note of the location where both were decompressed.
 
 To ensure if you are taking note of the correct location, check if each directory contains the following files:
@@ -482,13 +482,13 @@ the directory should contain the `Contents` subdirectory.
 ### Updating the location of the JDK and / or the Android command line tools.
 If the location for the JDK or the Android command line tools have been setup with the wrong path or
 if their location has changed after the initial configuration, the location for either of those can
-be changed by editing the configuration file at `${USER_HOME}/.bubblewrap/config.json`.
+be changed by editing the configuration file at `${USER_HOME}/.pwawrap/config.json`.
 
 #### Sample config.json
 ```
 {
-  "jdkPath":"\\user\\home\\bubblewrap-user\\open-jdk",
-  "androidSdkPath":"\\user\\home\\bubblewrap-user\\android-cli"
+  "jdkPath":"\\user\\home\\pwawrap-user\\open-jdk",
+  "androidSdkPath":"\\user\\home\\pwawrap-user\\android-cli"
  }
 
 ```

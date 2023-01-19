@@ -1,6 +1,6 @@
 {
   "name": "@pwawrap/cli",
-  "version": "1.0.2-alpha.0",
+  "version": "1.0.2-alpha.1",
   "description": "CLI tool to Generate TWA projects from a Web Manifest",
   "bin": {
     "pwawrap": "bin/pwawrap.js"

@@ -30,6 +30,13 @@ When running Bubblewrap for the first time, it will offer to automatically downl
 external dependencies. This is the recommended setup, but it's possible to
 [manually setup the environment](#manually-setting-up-the-environment).
 
+## Container
+
+As an alternative to running the cli on your machine with Node.js directly you can use this 
+container image which got the cli and all dependencies pre-installed. To use the cli run
+`docker run --rm -ti ghcr.io/GoogleChromeLabs/bubblewrap:latest [cmd]` as you would normally 
+use `bubblewrap [cmd]`.
+
 ## Quickstart Guide
 
 ### Installing Bubblewrap
@@ -446,16 +453,16 @@ Information on the signature fingerprints for the application. Use to generate t
 
 ## Manually setting up the Environment
 
-### Get the Java Development Kit (JDK) 8.
+### Get the Java Development Kit (JDK) 11.
 The Android Command line tools requires the correct version of the JDK to run. To prevent version
 conflicts with a JDK version that is already installed, Bubblewrap uses a JDK that can unzipped in
 a separate folder.
 
-Download a version of JDK 8 that is compatible with your OS from
-[AdoptOpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk8&jvmVariant=hotspot)
+Download a version of JDK 11 that is compatible with your OS from
+[AdoptOpenJDK](https://adoptopenjdk.net/releases.html?variant=openjdk11&jvmVariant=hotspot)
 and extract it in its own folder.
 
-:warning: **Warning:** Using a version lower than 8 will make it impossible to compile the project and higher
+:warning: **Warning:** Using a version lower than 11 will make it impossible to compile the project and higher
 versions are incompatible with the Android command line tools.
 
 ### Get the Android command line tools

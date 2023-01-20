@@ -14,10 +14,10 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
-# Bubblewrap
-[![Node CI Status](https://github.com/GoogleChromeLabs/bubblewrap/workflows/Node%20CI/badge.svg)](https://github.com/GoogleChromeLabs/bubblewrap/actions?query=workflow%3A%22Node+CI%22)
+# PWAWrap
 
-Bubblewrap is a set of tools and libraries designed to help developers to create, build and update
+
+PWAWrap is a set of tools and libraries designed to help developers to create, build and update
 projects for Android Applications that launch Progressive Web App (PWA) using
 [Trusted Web Activity (TWA)](https://developer.chrome.com/docs/android/trusted-web-activity/).
 
@@ -25,28 +25,28 @@ projects for Android Applications that launch Progressive Web App (PWA) using
 - [Node.js](https://nodejs.org/en/) 12.0 or above
 
 ## Getting Started
-- To get started with building an application using Bubblewrap, check the [Trusted Web Activity
-Quick Start Guide][1] or the [bubblewrap/cli](./packages/cli) documentation.
+- To get started with building an application using PWAWrap, check the [Trusted Web Activity
+Quick Start Guide][1] or the [pwawrap/cli](./packages/cli) documentation.
 
-## Bubblewrap Components
+## PWAWrap Components
 
-- **[bubblewrap/core](./packages/core):** a javascript library for generating, building and
+- **[pwawrap/core](./packages/core):** a javascript library for generating, building and
 updating TWA projects.
-- **[bubblewrap/cli](./packages/cli):** a command-line version of Bubblewrap.
-- **[bubblewrap/validator](./packages/validator):** library to validate the correctness and
+- **[pwawrap/cli](./packages/cli):** a command-line version of PWAWrap.
+- **[pwawrap/validator](./packages/validator):** library to validate the correctness and
 compare Trusted Web Activity projects against the quality criteria.
 
 ## Community
 
 We welcome anyone who wants to contribute with issues, feedback, feature requests or just
-generally discuss Bubblewrap. Alternatively developers can contribute to the conversation
+generally discuss PWAWrap. Alternatively developers can contribute to the conversation
 by joining the public monthly office hours, which hosted on every first Thursday at 5PM,
 London time. Check when the next office hours is going to happen via [this calendar][5]
 and join the meeting via [this link][3].
  
 ## Getting started with GUI tools 
 - If you are just getting started with APK generation from PWA, You might want to check [PWABuilder](https://www.pwabuilder.com/).
-This tool is powered by Bubblewrap and uses the same underlying core. 
+This tool is powered by PWAWrap and uses the same underlying core. 
 
 ## Contributing
 

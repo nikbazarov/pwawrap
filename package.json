@@ -1,5 +1,5 @@
 {
-  "name": "pwawrap",
+  "name": "@nikbazarov/pwawrap",
   "private": false,
   "version": "0.0.1",
   "description": "Generate TWA projects from a Web Manifest",

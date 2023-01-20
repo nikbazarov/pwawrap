@@ -1,6 +1,6 @@
 {
   "name": "@pwawrap/cli",
-  "version": "1.0.2",
+  "version": "1.0.3-alpha.0",
   "description": "CLI tool to Generate TWA projects from a Web Manifest",
   "bin": {
     "pwawrap": "bin/pwawrap.js"
@@ -26,8 +26,8 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-    "@pwawrap/core": "^1.0.2",
-    "@pwawrap/validator": "^1.0.2",
+    "@pwawrap/core": "^1.0.3-alpha.0",
+    "@pwawrap/validator": "^1.0.3-alpha.0",
     "@types/cli-progress": "^3.7.0",
     "@types/color": "^3.0.0",
     "@types/inquirer": "^6.5.0",

@@ -26,5 +26,5 @@
     "@types/node-fetch": "^2.5.7",
     "node-fetch": "^2.6.0"
   },
-  "gitHead": "06239048da9160d00545deaeaca8f5123e14af11"
+  "gitHead": "ce5e2ada934f616bc4b60a677430f09377b1f8a9"
 }

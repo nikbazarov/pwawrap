@@ -9,3 +9,4 @@ dist
 lerna-debug.log
 .npmrc
 .git-key
+test-app/

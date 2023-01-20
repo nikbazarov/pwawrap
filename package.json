@@ -1,6 +1,6 @@
 {
-  "name": "root",
-  "private": true,
+  "name": "pwawrap",
+  "private": false,
   "version": "0.0.1",
   "description": "Generate TWA projects from a Web Manifest",
   "scripts": {
@@ -23,6 +23,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nikbazarov/pwawrap.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "author": "berkano",
   "license": "Apache-2.0",

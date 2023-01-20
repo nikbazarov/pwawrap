@@ -7,3 +7,5 @@ dist
 **/node_modules
 **/dist
 lerna-debug.log
+.npmrc
+.git-key
